@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sdeak.purdue.edu.lifecouter.HomeScreen"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/centerPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/startGame"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/p1Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/awakeSelect"
+        app:srcCompat="@android:drawable/ic_lock_power_off" />
+
+    <TextView
+        android:id="@+id/playersDisp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="end"
+        android:text="Players:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/centerPoint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/playerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="4"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/lifeTotal"
+        app:layout_constraintStart_toStartOf="@+id/centerPoint"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp" />
+
+    <SeekBar
+        android:id="@+id/players"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="3"
+        android:progress="3"
+        app:layout_constraintBottom_toBottomOf="@+id/playersDisp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playerCount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lifeTotalDisp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Life Total:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/centerPoint"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playersDisp"
+        android:gravity="end" />
+
+    <EditText
+        android:id="@+id/lifeTotal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="3"
+        android:text="40"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lifeTotalDisp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerPoint"
+        app:layout_constraintTop_toBottomOf="@+id/players" />
+
+    <TextView
+        android:id="@+id/holdValueDisp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Hold Value:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="@+id/centerPoint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lifeTotalDisp"
+        android:gravity="end" />
+
+    <EditText
+        android:id="@+id/holdValue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="10"
+        android:inputType="number"
+        android:text="5"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:maxLength="3"
+        app:layout_constraintBottom_toBottomOf="@+id/holdValueDisp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerPoint"
+        app:layout_constraintTop_toBottomOf="@+id/lifeTotal" />
+
+    <TextView
+        android:id="@+id/p1ColorDisp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
+        android:text="Player 1:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/p2ColorDisp"
+        app:layout_constraintEnd_toEndOf="@+id/centerPoint"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/p1Color"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/colors_array"
+        app:layout_constraintBottom_toTopOf="@+id/p2Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerPoint"
+        app:layout_constraintTop_toTopOf="@+id/p1ColorDisp" />
+
+    <TextView
+        android:id="@+id/p2ColorDisp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
+        android:text="Player 2:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/p3ColorDisp"
+        app:layout_constraintEnd_toEndOf="@+id/centerPoint"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/p2Color"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/colors_array"
+        app:layout_constraintBottom_toTopOf="@+id/p3Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerPoint"
+        app:layout_constraintTop_toTopOf="@+id/p2ColorDisp" />
+
+    <TextView
+        android:id="@+id/p3ColorDisp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
+        android:text="Player 3:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/p4ColorDisp"
+        app:layout_constraintEnd_toEndOf="@+id/centerPoint"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/p3Color"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/colors_array"
+        app:layout_constraintBottom_toTopOf="@+id/p4Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerPoint"
+        app:layout_constraintTop_toTopOf="@+id/p3ColorDisp" />
+
+    <TextView
+        android:id="@+id/p4ColorDisp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
+        android:text="Player 4:"
+        android:textAlignment="textEnd"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/centerPoint"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/p4Color"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/colors_array"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerPoint"
+        app:layout_constraintTop_toTopOf="@+id/p4ColorDisp" />
+
+    <CheckBox
+        android:id="@+id/awakeSelect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:button="@null"
+        android:buttonTint="@color/colorAccent"
+        android:checked="true"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:text="Keep Screen Awake:"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/holdValue" />
+
+</android.support.constraint.ConstraintLayout>
